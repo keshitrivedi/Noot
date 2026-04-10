@@ -1,5 +1,74 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &8960105288158542832
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4967493996508184090}
+  - component: {fileID: 7692256959390612709}
+  - component: {fileID: 3420544091933390304}
+  m_Layer: 0
+  m_Name: AdoptionArea
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4967493996508184090
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8960105288158542832}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 744660858845751145}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!136 &7692256959390612709
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8960105288158542832}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 9.530352
+  m_Height: 19.060703
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.019032001, z: 0}
+--- !u!114 &3420544091933390304
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8960105288158542832}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cedc79edaf9584a4aaaa824c6bd50b1d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Adoption
+  isAdopted: 0
 --- !u!1001 &999562062715551874
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -60,7 +129,10 @@ PrefabInstance:
     m_RemovedGameObjects:
     - {fileID: 5392398322951045289, guid: 625a591b8b6b7244a8db34ea5195a71a, type: 3}
     - {fileID: 65702495048144492, guid: 625a591b8b6b7244a8db34ea5195a71a, type: 3}
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 625a591b8b6b7244a8db34ea5195a71a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4967493996508184090}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 625a591b8b6b7244a8db34ea5195a71a, type: 3}
       insertIndex: -1
@@ -191,3 +263,8 @@ NavMeshAgent:
   m_BaseOffset: 4.67
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!4 &744660858845751145 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 625a591b8b6b7244a8db34ea5195a71a, type: 3}
+  m_PrefabInstance: {fileID: 999562062715551874}
+  m_PrefabAsset: {fileID: 0}

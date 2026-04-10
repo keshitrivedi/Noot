@@ -18,7 +18,9 @@ public class Baccha : MonoBehaviour
     [SerializeField] private GameObject mummi;
 
     private NavMeshAgent navMeshAgent;
-    private bool isAdopted = false;
+    // private bool isAdopted = false;
+
+    private Adoption adoptionScript;
 
     void Adopt()
     {
@@ -36,15 +38,17 @@ public class Baccha : MonoBehaviour
         navMeshAgent = GetComponent<NavMeshAgent>();
 
         mummiMovementScript = mummi.GetComponent<Yellow_movement_game>();
+
+        adoptionScript = GetComponentInChildren<Adoption>();
     }
 
-    void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.tag == "Player")
-        {
-            isAdopted = true;
-        }
-    }
+    // void OnTriggerEnter(Collider other)
+    // {
+    //     if (other.gameObject.tag == "Player")
+    //     {
+    //         isAdopted = true;
+    //     }
+    // }
 
     // Update is called once per frame
     void Update()
@@ -52,7 +56,7 @@ public class Baccha : MonoBehaviour
         bacchaTransform.LookAt(mummi.transform);
 
         bool mummiWalkStatus = mummiAnimator.GetBool("IsWalking");
-        if (isAdopted)
+        if (adoptionScript.isAdopted)
         {
 
             bacchaAnimator.SetBool("isBacchaWalking", mummiWalkStatus);
