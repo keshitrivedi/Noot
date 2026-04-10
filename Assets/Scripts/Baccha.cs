@@ -25,7 +25,7 @@ public class Baccha : MonoBehaviour
     void Adopt()
     {
         id = Glowbawls.bacchaLog.Count;
-        Glowbawls.bacchaLog.Push(this);
+        Glowbawls.bacchaLog.Add(this);
     }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -36,6 +36,10 @@ public class Baccha : MonoBehaviour
         bacchaAnimator = GetComponent<Animator>();
 
         navMeshAgent = GetComponent<NavMeshAgent>();
+        navMeshAgent.acceleration = 100f;
+        navMeshAgent.angularSpeed = 1000f;
+        navMeshAgent.stoppingDistance = 5f;
+        navMeshAgent.autoBraking = true;
 
         mummiMovementScript = mummi.GetComponent<Yellow_movement_game>();
 
@@ -66,7 +70,8 @@ public class Baccha : MonoBehaviour
                 navMeshAgent.destination = mummiTransform.position;
             } else
             {
-                navMeshAgent.destination = Glowbawls.bacchaLog.Peek().transform.position;
+                // navMeshAgent.destination = Glowbawls.bacchaLog.Peek().transform.position;
+                navMeshAgent.destination = Glowbawls.bacchaLog[id - 1].transform.position;
             }
 
             if (id == -1)

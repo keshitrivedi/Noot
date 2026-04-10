@@ -5,7 +5,7 @@ using UnityEngine;
 public class Glowbawls : MonoBehaviour
 {
     // public static Baccha[] bacchaLog;
-    public static Stack<Baccha> bacchaLog = new Stack<Baccha>();
+    public static List<Baccha> bacchaLog = new List<Baccha>();
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
