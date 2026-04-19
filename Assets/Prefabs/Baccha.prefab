@@ -125,6 +125,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: Baccha
       objectReference: {fileID: 0}
+    - target: {fileID: 5074512353664290214, guid: 625a591b8b6b7244a8db34ea5195a71a, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 3a14a12c9bc38584ba77856085789335, type: 2}
+    - target: {fileID: 8003028576119023140, guid: 625a591b8b6b7244a8db34ea5195a71a, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 9ebf5f4be43ac6b48bbde56fdbbbeb71, type: 2}
+    - target: {fileID: 8417361359673230750, guid: 625a591b8b6b7244a8db34ea5195a71a, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 495682ce3f2dcd746a9d777cd8f340cb, type: 2}
+    - target: {fileID: 8743813690021804245, guid: 625a591b8b6b7244a8db34ea5195a71a, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 439bf11372028774aa71f8e8a4d2a0db, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 5392398322951045289, guid: 625a591b8b6b7244a8db34ea5195a71a, type: 3}
@@ -206,7 +222,7 @@ CapsuleCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -237,7 +253,7 @@ Rigidbody:
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 1
-  m_IsKinematic: 1
+  m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 80
   m_CollisionDetection: 0

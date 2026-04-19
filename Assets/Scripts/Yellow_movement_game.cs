@@ -88,7 +88,7 @@ public class Yellow_movement_game : MonoBehaviour, InputSystem_Actions.IPlayerAc
         if (!context.performed) return;
         yellow_animator.speed = 1;
         yellow_animator.SetTrigger("TrJump");
-        StartCoroutine(Delay(0.5f));
+        // StartCoroutine(Delay(0.1f));
     }
 
     public void OnLook(InputAction.CallbackContext context)
