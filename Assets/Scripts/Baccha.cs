@@ -15,7 +15,7 @@ public class Baccha : MonoBehaviour
 
     private Yellow_movement_game mummiMovementScript;
 
-    [SerializeField] private GameObject mummi;
+    public GameObject mummi;
 
     private NavMeshAgent navMeshAgent;
     // private bool isAdopted = false;

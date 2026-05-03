@@ -1835,7 +1835,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b723825b7e2aca64abcefccc05441784, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Spawnner
-  baccha: {fileID: 0}
+  bacchaPrefab: {fileID: 80574099907362259, guid: f5993824748dfec4daf7bd68869339bc, type: 3}
+  mummi: {fileID: 1217553980}
 --- !u!114 &1783483304
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1864,7 +1865,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 547afc539156d674d9715c6c6d320fde, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CameraFollower
-  yellow_transform: {fileID: 0}
+  yellow_transform: {fileID: 1217553986}
   xOff: 0
   yOff: 0
   zOff: 0
