@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class Adoption : MonoBehaviour
@@ -6,7 +7,7 @@ public class Adoption : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        StartCoroutine(destroyBaccha(15f));
     }
 
     void OnTriggerEnter(Collider other)
@@ -21,5 +22,14 @@ public class Adoption : MonoBehaviour
     void Update()
     {
         
+    }
+
+    IEnumerator destroyBaccha(float delaySeconds)
+    {
+        yield return new WaitForSeconds(delaySeconds);
+        if (!isAdopted)
+        {
+            Destroy(gameObject);
+        }
     }
 }
