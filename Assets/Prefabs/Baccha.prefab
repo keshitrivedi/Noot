@@ -186,7 +186,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 155e14a9b234d8549abde6726e755327, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Baccha
-  id: 0
+  id: -1
   mummi: {fileID: 0}
 --- !u!95 &1982344353432073061
 Animator:
@@ -225,7 +225,7 @@ CapsuleCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2

@@ -44,8 +44,8 @@ public class Yellow_movement : MonoBehaviour
         Vector2 mouseSpeed = (mousePosition - lastMousePosition)/Time.deltaTime;
         lastMousePosition = mousePosition;
 
-        Debug.Log(mouseSpeed.x);
-        Debug.Log(mousePosition);
+        // Debug.Log(mouseSpeed.x);
+        // Debug.Log(mousePosition);
 
         if (yellow_animator != null)
         {

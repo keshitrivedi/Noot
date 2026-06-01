@@ -26,10 +26,12 @@ public class Baccha : MonoBehaviour
     {
         id = Glowbawls.bacchaLog.Count;
         Glowbawls.bacchaLog.Add(this);
+        Debug.Log("Adopt called, id: " + id);
     }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        id = -1;
         bacchaTransform = GetComponent<Transform>();
         mummiTransform = mummi.GetComponent<Transform>();
         mummiAnimator = mummi.GetComponent<Animator>();
@@ -62,8 +64,13 @@ public class Baccha : MonoBehaviour
         bool mummiWalkStatus = mummiAnimator.GetBool("IsWalking");
         if (adoptionScript.isAdopted)
         {
-
+            Debug.Log("Adopteddd");
             bacchaAnimator.SetBool("isBacchaWalking", mummiWalkStatus);
+
+            if (id == -1)
+            {
+                Adopt();
+            }
 
             if (id == 0)
             {
@@ -72,11 +79,6 @@ public class Baccha : MonoBehaviour
             {
                 // navMeshAgent.destination = Glowbawls.bacchaLog.Peek().transform.position;
                 navMeshAgent.destination = Glowbawls.bacchaLog[id - 1].transform.position;
-            }
-
-            if (id == -1)
-            {
-                Adopt();
             }
 
             if (mummiWalkStatus == false)
@@ -94,7 +96,8 @@ public class Baccha : MonoBehaviour
             float mummiBacchaDist = Vector3.Distance(mummiTransform.position, bacchaTransform.position);
             Debug.Log(mummiBacchaDist);
             
+            
         }
-        
+        Debug.Log($"Count: {Glowbawls.bacchaLog.Count}");
     }
 }

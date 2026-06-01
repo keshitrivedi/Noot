@@ -15,6 +15,7 @@ public class Adoption : MonoBehaviour
         if (other.gameObject.tag == "Player")
         {
             isAdopted = true;
+            Debug.Log("ADOPHTED");
         }
     }
 
