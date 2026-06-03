@@ -22,6 +22,8 @@ public class Baccha : MonoBehaviour
 
     private Adoption adoptionScript;
 
+    public bool isDiscarded = false;
+
     void Adopt()
     {
         id = Glowbawls.bacchaLog.Count;
@@ -65,36 +67,39 @@ public class Baccha : MonoBehaviour
         if (adoptionScript.isAdopted)
         {
             Debug.Log("Adopteddd");
-            bacchaAnimator.SetBool("isBacchaWalking", mummiWalkStatus);
+            // bacchaAnimator.SetBool("isBacchaWalking", mummiWalkStatus);
 
             if (id == -1)
             {
                 Adopt();
             }
 
-            if (id == 0)
-            {
-                navMeshAgent.destination = mummiTransform.position;
-            } else
-            {
-                // navMeshAgent.destination = Glowbawls.bacchaLog.Peek().transform.position;
-                navMeshAgent.destination = Glowbawls.bacchaLog[id - 1].transform.position;
-            }
+            if (!this.isDiscarded) {
+                bacchaAnimator.SetBool("isBacchaWalking", mummiWalkStatus);
+                if (id == 0)
+                {
+                    navMeshAgent.destination = mummiTransform.position;
+                } else
+                {
+                    // navMeshAgent.destination = Glowbawls.bacchaLog.Peek().transform.position;
+                    navMeshAgent.destination = Glowbawls.bacchaLog[id - 1].transform.position;
+                }
+                
+                if (mummiWalkStatus == false)
+                {
+                    navMeshAgent.speed = 0;
+                } else
+                {
+                    navMeshAgent.speed = 15f;
+                }
 
-            if (mummiWalkStatus == false)
-            {
-                navMeshAgent.speed = 0;
-            } else
-            {
-                navMeshAgent.speed = 15f;
+                if (mummiMovementScript.isSprinting)
+                {
+                    navMeshAgent.speed = 20f;
+                }
             }
-
-            if (mummiMovementScript.isSprinting)
-            {
-                navMeshAgent.speed = 20f;
-            }
-            float mummiBacchaDist = Vector3.Distance(mummiTransform.position, bacchaTransform.position);
-            Debug.Log(mummiBacchaDist);
+            // float mummiBacchaDist = Vector3.Distance(mummiTransform.position, bacchaTransform.position);
+            // Debug.Log(mummiBacchaDist);
             
             
         }
