@@ -1,10 +1,12 @@
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class safeZone : MonoBehaviour
 {
+    private static Queue<Baccha> discardedBacchas = new Queue<Baccha>();
     private bool isEnteredSafe;
-    private int currCap;
+    // private int currCap;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Awake()
     {
@@ -12,7 +14,7 @@ public class safeZone : MonoBehaviour
     }
     void Start()
     {
-        currCap = 0;
+        // currCap = 0;
     }
 
     void OnTriggerEnter(Collider other)
@@ -37,13 +39,22 @@ public class safeZone : MonoBehaviour
         // discard is X
         if (isEnteredSafe && Keyboard.current.xKey.wasPressedThisFrame)
         {
-            if (currCap < 3 && Glowbawls.bacchaLog.Count > 1)
+            if (discardedBacchas.Count < 3 && Glowbawls.bacchaLog.Count >= 1)
             {
                 Glowbawls.bacchaLog[Glowbawls.bacchaLog.Count - 1].transform.position = this.transform.position;
                 Glowbawls.bacchaLog[Glowbawls.bacchaLog.Count - 1].isDiscarded = true;
+                discardedBacchas.Enqueue(Glowbawls.bacchaLog[Glowbawls.bacchaLog.Count - 1]);
                 Glowbawls.bacchaLog.RemoveAt(Glowbawls.bacchaLog.Count - 1);
-                currCap ++;
+                // currCap ++;
             }
+        }
+
+        // readopt
+        if (isEnteredSafe && Keyboard.current.eKey.wasPressedThisFrame && discardedBacchas.Count > 0)
+        {
+            Glowbawls.bacchaLog.Add(discardedBacchas.Dequeue());
+            // Glowbawls.bacchaLog[Glowbawls.bacchaLog.Count - 1].id = Glowbawls.bacchaLog.Count;
+            Glowbawls.bacchaLog[Glowbawls.bacchaLog.Count - 1].isDiscarded = false;
         }
     }
 }

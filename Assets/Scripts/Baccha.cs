@@ -28,7 +28,7 @@ public class Baccha : MonoBehaviour
     {
         id = Glowbawls.bacchaLog.Count;
         Glowbawls.bacchaLog.Add(this);
-        Debug.Log("Adopt called, id: " + id);
+        // Debug.Log("Adopt called, id: " + id);
     }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -76,13 +76,13 @@ public class Baccha : MonoBehaviour
 
             if (!this.isDiscarded) {
                 bacchaAnimator.SetBool("isBacchaWalking", mummiWalkStatus);
-                if (id == 0)
+                if (Glowbawls.bacchaLog.IndexOf(this) == 0)
                 {
                     navMeshAgent.destination = mummiTransform.position;
                 } else
                 {
                     // navMeshAgent.destination = Glowbawls.bacchaLog.Peek().transform.position;
-                    navMeshAgent.destination = Glowbawls.bacchaLog[id - 1].transform.position;
+                    navMeshAgent.destination = Glowbawls.bacchaLog[Glowbawls.bacchaLog.IndexOf(this) - 1].transform.position;
                 }
                 
                 if (mummiWalkStatus == false)

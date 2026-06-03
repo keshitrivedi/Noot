@@ -12,6 +12,7 @@ public class Adoption : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
+        // !this.transform.parent.GetComponent<Baccha>().isDiscarded
         if (other.gameObject.tag == "Player")
         {
             isAdopted = true;
