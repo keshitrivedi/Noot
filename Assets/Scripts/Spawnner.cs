@@ -13,11 +13,17 @@ public class Spawnner : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        xLimUp = transform.position.x + 20;
-        xLimLow = transform.position.x - 20;
+        // xLimUp = transform.position.x + 20;
+        // xLimLow = transform.position.x - 20;
 
-        zLimUp = transform.position.z + 20;
-        zLimLow = transform.position.z - 20;
+        // zLimUp = transform.position.z + 20;
+        // zLimLow = transform.position.z - 20;
+
+        xLimUp = transform.position.x + 20 + 2.25f;
+        xLimLow = transform.position.x - 20 - 2.25f;
+
+        zLimUp = transform.position.z + 20 + 2.25f;
+        zLimLow = transform.position.z - 20 - 2.25f - 4.5f*(Glowbawls.bacchaLog.Count < 6 ? Glowbawls.bacchaLog.Count : 6);
 
         // bacchaPrefab.GetComponent<Baccha>().mummi = mummi;
 
@@ -35,11 +41,17 @@ public class Spawnner : MonoBehaviour
         while (true) {
             yield return new WaitForSeconds(delaySeconds);
 
-            xLimUp = transform.position.x + 20;
-            xLimLow = transform.position.x - 20;
+            // xLimUp = transform.position.x + 20;
+            // xLimLow = transform.position.x - 20;
 
-            zLimUp = transform.position.z + 20;
-            zLimLow = transform.position.z - 20;
+            // zLimUp = transform.position.z + 20;
+            // zLimLow = transform.position.z - 20;
+
+            xLimUp = transform.position.x + 20 + 2.25f;
+            xLimLow = transform.position.x - 20 - 2.25f;
+
+            zLimUp = transform.position.z + 20 + 2.25f;
+            zLimLow = transform.position.z - 20 - 2.25f - 4.5f*(Glowbawls.bacchaLog.Count < 6 ? Glowbawls.bacchaLog.Count : 6);
 
             Vector3 randomSpawnPos = new Vector3(Random.Range(xLimLow, xLimUp), 0, Random.Range(zLimLow, zLimUp));
 
