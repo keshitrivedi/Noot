@@ -1,3 +1,4 @@
+using System.Linq;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -5,6 +6,7 @@ public class Collectible : MonoBehaviour
 {
     // [SerializeField] private Collider collColl;
     // private bool isCollected = false;
+    public int weight;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -18,6 +20,10 @@ public class Collectible : MonoBehaviour
 
             Debug.Log("Wao Khaana");
             // isCollected = true;
+            if (Glowbawls.food.Sum() < Glowbawls.foodLimit)
+            {
+                Glowbawls.food.Add(weight);
+            }
             gameObject.SetActive(false);
         }
     }
