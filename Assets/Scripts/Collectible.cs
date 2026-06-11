@@ -10,7 +10,7 @@ public class Collectible : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        weight = 3;
     }
 
     void OnTriggerEnter(Collider other)
@@ -23,6 +23,8 @@ public class Collectible : MonoBehaviour
             if (Glowbawls.food.Sum() < Glowbawls.foodLimit)
             {
                 Glowbawls.food.Add(weight);
+                Debug.Log("Addededed");
+                Debug.Log($"food count: {Glowbawls.food.Count}");
             }
             gameObject.SetActive(false);
         }

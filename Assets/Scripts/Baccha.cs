@@ -103,6 +103,6 @@ public class Baccha : MonoBehaviour
             
             
         }
-        Debug.Log($"Count: {Glowbawls.bacchaLog.Count}");
+        // Debug.Log($"Count: {Glowbawls.bacchaLog.Count}");
     }
 }

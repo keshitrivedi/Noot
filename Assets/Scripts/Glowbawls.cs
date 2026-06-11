@@ -21,9 +21,9 @@ public class Glowbawls : MonoBehaviour
     }
     void Start()
     {
-        lineRenderer.positionCount = 2;
-        lineRenderer.SetPosition(0, Vector3.zero);
-        lineRenderer.SetPosition(1, Vector3.right * 5);
+        // lineRenderer.positionCount = 2;
+        // lineRenderer.SetPosition(0, Vector3.zero);
+        // lineRenderer.SetPosition(1, Vector3.right * 5);
     }
 
     // Update is called once per frame

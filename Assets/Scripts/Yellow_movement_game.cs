@@ -29,6 +29,8 @@ public class Yellow_movement_game : MonoBehaviour, InputSystem_Actions.IPlayerAc
     private Vector3 verticalInput;
     private Vector2 _direction;
     private Vector3 jumpVelocity;
+
+    private Transform frontCameraTransform;
     private void OnEnable()
     {
         _input = new InputSystem_Actions();
@@ -160,7 +162,7 @@ public class Yellow_movement_game : MonoBehaviour, InputSystem_Actions.IPlayerAc
     void Start()
     {
         Debug.Log("Sab Khairiyat");
-
+        frontCameraTransform.LookAt(yellow_transform);
         // if (yellow_animator)
         // {
         //     yellow_animator.SetTrigger("TrGame");
