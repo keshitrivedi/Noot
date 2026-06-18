@@ -20,7 +20,7 @@ public class Meepmap : MonoBehaviour
     [SerializeField] private FoodSpawnner foodSpawnner;
     [SerializeField] private MushroomSpawnner mushroomSpawnner;
     private float terrainWidth;
-    int cellCount = 20;
+    int cellCount = 40;
     private float cellWidth;
 
     // List<GridCell> grid = new List<GridCell>();
@@ -56,7 +56,7 @@ public class Meepmap : MonoBehaviour
             {
                 if (UnityEngine.Random.Range(0, 5) == 0)
                 {
-                    UnityEngine.Vector3 randomSpawnPos = new UnityEngine.Vector3(x * cellWidth, 12.2f, z * cellWidth);
+                    UnityEngine.Vector3 randomSpawnPos = new UnityEngine.Vector3(x * cellWidth, -0.1f, z * cellWidth);
                     // Call MushroomSpawnner ^-^
                     mushroomSpawnner.InstantiateMush(randomSpawnPos);
                     Debug.Log("musgroen");

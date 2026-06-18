@@ -102,11 +102,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8376a2179da6abc499a386b8cb1b4cd4, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.7071067
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8376a2179da6abc499a386b8cb1b4cd4, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.7071068
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8376a2179da6abc499a386b8cb1b4cd4, type: 3}
       propertyPath: m_LocalRotation.y
@@ -114,7 +114,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8376a2179da6abc499a386b8cb1b4cd4, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8376a2179da6abc499a386b8cb1b4cd4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -171,7 +171,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56d52cdd2afbb934291673fb303c1f8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Mush
-  capacity: 0
+  capacity: 5
 --- !u!208 &-2633050078791849344
 NavMeshObstacle:
   m_ObjectHideFlags: 0
